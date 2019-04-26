@@ -28,7 +28,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
-    <output url="file://$MODULE_DIR$/../../../../Coffee Machine in Kotlin/task/build/classes/java/main" />
+    <output url="file://$MODULE_DIR$/../../../../Coffee Machine in Kotlin/task/out/production/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../Coffee Machine in Kotlin/task/src">
       <sourceFolder url="file://$MODULE_DIR$/../../../../Coffee Machine in Kotlin/task/src" isTestSource="false" />
