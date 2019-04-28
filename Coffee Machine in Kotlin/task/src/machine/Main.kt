@@ -7,7 +7,6 @@ var currentBeans = 120
 var currentCups = 9
 var stayInLoop = true
 fun main() {
-
     while(stayInLoop) {
         printStatus()
         println("Write action (buy, fill, take, remaining, exit):")
@@ -20,8 +19,6 @@ fun main() {
             else -> return
         }
     }
-
-
     printStatus()
 }
 
@@ -148,4 +145,6 @@ fun canWeMakeIT(water : Int, milk: Int, coffee: Int) : Boolean{
 fun printSuccess() {
     println("I have enough resources. Making you a coffee")
 }
+
+
 
