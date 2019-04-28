@@ -6,16 +6,19 @@ var currentMilk = 540
 var currentBeans = 120
 var currentCups = 9
 var stayInLoop = true
+var machineState = MachineState.from("start")
 fun main() {
-    while(stayInLoop) {
+    while(machineState != MachineState.EXIT) {
         printStatus()
         println("Write action (buy, fill, take, remaining, exit):")
-        when (readLine().toString().toLowerCase()) {
-            "buy" -> buy()
-            "fill" -> fill()
-            "take" -> take()
-            "remaining" -> remainingItems()
-            "exit" -> exitLoop()
+        val newState = readLine().toString().toLowerCase()
+        machineState = MachineState.from(newState)
+        when (machineState) {
+            MachineState.BUY -> buy()
+            MachineState.FILL-> fill()
+            MachineState.TAKE-> take()
+            MachineState.REMAINING-> remainingItems()
+            MachineState.EXIT-> exitLoop()
             else -> return
         }
     }
@@ -144,6 +147,18 @@ fun canWeMakeIT(water : Int, milk: Int, coffee: Int) : Boolean{
 }
 fun printSuccess() {
     println("I have enough resources. Making you a coffee")
+}
+enum class MachineState(val state: String) {
+    START("start"),
+    BUY("buy"),
+    FILL("fill"),
+    TAKE("take"),
+    REMAINING("remaining"),
+    EXIT("exit");
+
+    companion object {
+        fun from(findValue: String): MachineState = MachineState.values().first { it.state == findValue }
+    }
 }
 
 
