@@ -5,8 +5,7 @@ fun main() {
     var coffeStart = CoffeMaker()
     while (stayInLoop) {
         coffeStart.helloMessage()
-        var input = readLine().toString().toLowerCase()
-        coffeStart.setFunction(input)
+        coffeStart.setFunction(readLine().toString().toLowerCase())
     }
 }
 
@@ -62,24 +61,24 @@ class CoffeMaker() {
     fun setFunction(input: String) {
         when (input) {
             "buy" -> {
-                buy()
                 changeState(input)
+                buy()
             }
             "fill" -> {
-                fill(input)
                 changeState(input)
+                fill(input)
             }
             "take" -> {
-                take()
                 changeState(input)
+                take()
             }
             "remaining" -> {
-                remainingItems()
                 changeState(input)
+                remainingItems()
             }
             "exit" -> {
-                exitLoop()
                 changeState(input)
+                exitLoop()
             }
             else -> {
                 if (currentState == MachineState.BUY) {
