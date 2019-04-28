@@ -691,6 +691,21 @@
                               </TaskFile>
                             </value>
                           </entry>
+                          <entry key="src/machine/Test2.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/machine/Test2.kt" />
+                                <option name="text" value="" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
                         </map>
                       </option>
                       <option name="updateDate" value="1556015741000" />
