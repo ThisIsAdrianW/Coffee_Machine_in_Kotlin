@@ -1,12 +1,13 @@
 package machine
 
 var currentCash = 550
-var currentWater = 1200
+var currentWater = 400
 var currentMilk = 540
 var currentBeans = 120
 var currentCups = 9
 var stayInLoop = true
 fun main() {
+
     while(stayInLoop) {
         printStatus()
         println("Write action (buy, fill, take, remaining, exit):")

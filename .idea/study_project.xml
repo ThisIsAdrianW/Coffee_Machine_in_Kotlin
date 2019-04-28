@@ -223,7 +223,7 @@
           <option name="items">
             <list>
               <FrameworkLesson>
-                <option name="currentTaskIndex" value="3" />
+                <option name="currentTaskIndex" value="4" />
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="1" />
@@ -417,7 +417,7 @@
                       <option name="id" value="5662" />
                       <option name="index" value="4" />
                       <option name="name" value="Choosing different actions" />
-                      <option name="record" value="-1" />
+                      <option name="record" value="4" />
                       <option name="status" value="Solved" />
                       <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="files">
@@ -501,7 +501,7 @@
                       <option name="name" value="Creating main loop" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="files">
                         <map>
                           <entry key="src/machine/Main.kt">
@@ -510,7 +510,7 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="src/machine/Main.kt" />
                                 <option name="text" value="package machine&#10;&#10;fun main() {&#10;    println(&quot;Hello World!&quot;)&#10;}" />
                                 <option name="trackChanges" value="true" />
@@ -531,6 +531,36 @@
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="visible" value="false" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/machine/Stage4.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/machine/Stage4.kt" />
+                                <option name="text" value="//package machine&#10;//&#10;//var currentCash = 550&#10;//var currentWater = 1200&#10;//var currentMilk = 540&#10;//var currentBeans = 120&#10;//var currentCups = 9&#10;//var stayInLoop = true&#10;//fun main() {&#10;//    while(stayInLoop) {&#10;//        printStatus()&#10;//        println(&quot;Write action (buy, fill, take, remaining, exit):&quot;)&#10;//        when (readLine().toString().toLowerCase()) {&#10;//            &quot;buy&quot; -&gt; buy()&#10;//            &quot;fill&quot; -&gt; fill()&#10;//            &quot;take&quot; -&gt; take()&#10;//            &quot;remaining&quot; -&gt; remainingItems()&#10;//            &quot;exit&quot; -&gt; exitLoop()&#10;//            else -&gt; return&#10;//        }&#10;//    }&#10;//&#10;//&#10;//    printStatus()&#10;//}&#10;//&#10;//fun buy() {&#10;//    println(&quot;What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu&quot;)&#10;//    when (readLine()) {&#10;//        &quot;1&quot; -&gt; buyEspresso()&#10;//        &quot;2&quot; -&gt; buyLatte()&#10;//        &quot;3&quot; -&gt; buyCappuccino()&#10;//        else -&gt; return&#10;//    }&#10;//&#10;//}&#10;//&#10;//fun printStatus() {&#10;//    println(&quot;The coffee machine has:&quot;)&#10;//    println(&quot;$currentWater of water&quot;)&#10;//    println(&quot;$currentMilk of milk&quot;)&#10;//    println(&quot;$currentBeans of coffee beans&quot;)&#10;//    println(&quot;$currentCups of disposable cups&quot;)&#10;//    println(&quot;$currentCash of money&quot;)&#10;//}&#10;//&#10;//fun buyEspresso() {&#10;//    val espresso = Espresso()&#10;//    if (canWeMakeIT(espresso.water, 0, espresso.coffee)) {&#10;//        currentBeans -= espresso.coffee&#10;//        currentWater -= espresso.water&#10;//        currentCash += espresso.cash&#10;//        currentCups--&#10;//        printSuccess()&#10;//    }&#10;//}&#10;//&#10;//fun buyLatte() {&#10;//    val latte = Latte()&#10;//    if (canWeMakeIT(latte.water, latte.milk, latte.coffee)) {&#10;//        currentBeans -= latte.coffee&#10;//        currentWater -= latte.water&#10;//        currentMilk -= latte.milk&#10;//        currentCash += latte.cash&#10;//        currentCups--&#10;//        printSuccess()&#10;//    }&#10;//}&#10;//&#10;//fun buyCappuccino() {&#10;//    val cappuccino = Cappuccino()&#10;//    if(canWeMakeIT(cappuccino.water, cappuccino.milk, cappuccino.coffee)) {&#10;//        currentBeans -= cappuccino.coffee&#10;//        currentMilk -= cappuccino.milk&#10;//        currentWater -= cappuccino.water&#10;//        currentCash += cappuccino.cash&#10;//        currentCups--&#10;//        printSuccess()&#10;//    }&#10;//}&#10;//&#10;//class Espresso {&#10;//    val water: Int = 250&#10;//    val coffee: Int = 16&#10;//    val cash: Int = 4&#10;//}&#10;//&#10;//class Latte {&#10;//    val water: Int = 350&#10;//    val milk: Int = 75&#10;//    val coffee: Int = 20&#10;//    val cash: Int = 7&#10;//}&#10;//&#10;//class Cappuccino {&#10;//    val water: Int = 200&#10;//    val milk: Int = 100&#10;//    val coffee: Int = 12&#10;//    val cash: Int = 6&#10;//}&#10;//fun take() {&#10;//    println(&quot;I gave you $$currentCash&quot;)&#10;//    currentCash=0&#10;//}&#10;//&#10;//fun fill() {&#10;//    println(&quot;Write how many ml of water do you want to add:&quot;)&#10;//    val waterAdd = readLine()?.toInt()&#10;//    currentWater += waterAdd!!&#10;//    println(&quot;Write how many ml of milk do you want to add:&quot;)&#10;//    val milkAdd = readLine()?.toInt()&#10;//    currentMilk += milkAdd!!&#10;//    println(&quot;Write how many grams of coffee beans do you want to add:&quot;)&#10;//    val addCoffee = readLine()?.toInt()&#10;//    currentBeans += addCoffee!!&#10;//    println(&quot;Write how many disposable cups of coffee do you want to add:&quot;)&#10;//    val addCups = readLine()?.toInt()&#10;//    currentCups += addCups!!&#10;//}&#10;//fun exitLoop() {&#10;//    stayInLoop = false&#10;//}&#10;//fun remainingItems() {&#10;//    printStatus()&#10;//}&#10;//fun canWeMakeIT(water : Int, milk: Int, coffee: Int) : Boolean{&#10;//    if (water &gt; currentWater) {&#10;//        println(&quot;Not enough water&quot;)&#10;//        return false&#10;//    }&#10;//    else if (milk &gt; currentMilk) {&#10;//        println(&quot;Not enough milk&quot;)&#10;//        return false&#10;//    }&#10;//    else if (coffee &gt; currentBeans) {&#10;//        println(&quot;Not enough beans&quot;)&#10;//        return false&#10;//    }&#10;//    else if(currentCups==0) {&#10;//        println(&quot;Not enough cups&quot;)&#10;//        return false&#10;//    }&#10;//    else {&#10;//        return true&#10;//    }&#10;//}&#10;//fun printSuccess() {&#10;//    println(&quot;I have enough resources. Making you a coffee&quot;)&#10;//}&#10;//&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/machine/Stage3.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/machine/Stage3.kt" />
+                                <option name="text" value="package machine&#10;&#10;fun main() {&#10;    println(&quot;Write how many ml of water the coffee machine has:&quot;)&#10;    val water = readLine()?.toInt()&#10;    println(&quot;Write how many ml of milk the coffee machine has:&quot;)&#10;    val milk = readLine()?.toInt()&#10;    println(&quot;Write how many grams of coffee beans the coffee machine has:&quot;)&#10;    val beans = readLine()?.toInt()&#10;    println(&quot;Write how many cups of coffee you will need:&quot;)&#10;    val cups = readLine()?.toInt()&#10;    val cupsMax = canWeMakeIT(water, milk, beans)&#10;    if (cupsMax &gt; cups!!) {&#10;        println(&quot;Yes, I can make that amount of coffee (and even ${cupsMax - cups} more than that)&quot;)&#10;    } else if (cupsMax == cups) {&#10;        println(&quot;Yes, I can make that amount of coffee &quot;)&#10;    } else {&#10;        println(&quot;No, I can make only $cupsMax cups of coffee&quot;)&#10;    }&#10;&#10;}&#10;&#10;fun canWeMakeIT(water: Int?, milk: Int?, beans: Int?): Int {&#10;    val waterCups = water?.div(200)&#10;    val milkCups = milk?.div(50)&#10;    val beansNumber = beans?.div(15)&#10;    return minOf(waterCups!!, milkCups!!, beansNumber!!)&#10;}&#10;&#10;//fun out() {&#10;//    println(&quot;Write how many cups of coffee you will need: &quot;)&#10;//    val coffeeNumber = readLine()&#10;//    coffeeNumber?.toInt()&#10;//    println(&quot;For $coffeeNumber cups of coffee you will need:&quot;)&#10;//    println(&quot;${coffeeNumber?.toInt()?.times(200)} ml of water&quot;)&#10;//    println(&quot;${coffeeNumber?.toInt()?.times(50)} ml of milk&quot;)&#10;//    println(&quot;${coffeeNumber?.toInt()?.times(15)} g of coffee beans&quot;)&#10;//}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
