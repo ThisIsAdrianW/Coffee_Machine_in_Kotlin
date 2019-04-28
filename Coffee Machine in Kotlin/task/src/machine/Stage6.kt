@@ -1,12 +1,10 @@
 //package machine
-//
-//var stayInLoop = true
+////Somehow working when pasted to https://hyperskill.org/projects/67/stages/365/implement
 //fun main() {
 //    var coffeStart = CoffeMaker()
-//    while (stayInLoop) {
+//    while (coffeStart.stayInLoop) {
 //        coffeStart.helloMessage()
-//        var input = readLine().toString().toLowerCase()
-//        coffeStart.setFunction(input)
+//        coffeStart.setFunction(readLine().toString().toLowerCase())
 //    }
 //}
 //
@@ -30,9 +28,7 @@
 //    val cash: Int = 6
 //}
 //
-//fun exitLoop() {
-//    stayInLoop = false
-//}
+//
 //
 //enum class FillStatus {
 //    START, WATER, COFFEE, MILK, CUPS, BEANS;
@@ -52,6 +48,7 @@
 //}
 //
 //class CoffeMaker() {
+//    var stayInLoop = true
 //    private var currentCash = 550
 //    private var currentWater = 400
 //    private var currentMilk = 540
@@ -62,24 +59,24 @@
 //    fun setFunction(input: String) {
 //        when (input) {
 //            "buy" -> {
-//                buy()
 //                changeState(input)
+//                buy()
 //            }
 //            "fill" -> {
-//                fill(input)
 //                changeState(input)
+//                fill(input)
 //            }
 //            "take" -> {
-//                take()
 //                changeState(input)
+//                take()
 //            }
 //            "remaining" -> {
-//                remainingItems()
 //                changeState(input)
+//                remainingItems()
 //            }
 //            "exit" -> {
-//                exitLoop()
 //                changeState(input)
+//                exitLoop()
 //            }
 //            else -> {
 //                if (currentState == MachineState.BUY) {
@@ -210,6 +207,9 @@
 //        if (currentState == MachineState.START) {
 //            println("Write action (buy, fill, take, remaining, exit):")
 //        }
+//    }
+//    private fun exitLoop() {
+//        stayInLoop = false
 //    }
 //}
 //

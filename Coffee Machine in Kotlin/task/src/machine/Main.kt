@@ -1,9 +1,9 @@
 package machine
 
-var stayInLoop = true
+
 fun main() {
     var coffeStart = CoffeMaker()
-    while (stayInLoop) {
+    while (coffeStart.stayInLoop) {
         coffeStart.helloMessage()
         coffeStart.setFunction(readLine().toString().toLowerCase())
     }
@@ -29,9 +29,7 @@ class Cappuccino {
     val cash: Int = 6
 }
 
-fun exitLoop() {
-    stayInLoop = false
-}
+
 
 enum class FillStatus {
     START, WATER, COFFEE, MILK, CUPS, BEANS;
@@ -51,6 +49,7 @@ enum class MachineState(val state: String) {
 }
 
 class CoffeMaker() {
+    var stayInLoop = true
     private var currentCash = 550
     private var currentWater = 400
     private var currentMilk = 540
@@ -209,6 +208,9 @@ class CoffeMaker() {
         if (currentState == MachineState.START) {
             println("Write action (buy, fill, take, remaining, exit):")
         }
+    }
+    private fun exitLoop() {
+        stayInLoop = false
     }
 }
 
